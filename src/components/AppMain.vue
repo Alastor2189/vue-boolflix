@@ -12,11 +12,17 @@ export default {
         AppCardMovie,
     },
     props: {
-        seriesFilm: Object,
+        seriesFilm: Array,
     },
 };
 </script>
 
 <style lang="scss" scoped>
-
+    .main {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black;
+    }
 </style>
