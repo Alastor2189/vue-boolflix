@@ -20,11 +20,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .card {
+    .menu-card {
         width: calc(100% / 4 - 8px);
         margin: 4px;
         padding: 1em;
         border: 1px solid black;
         text-align: center;
     }
+    
 </style>

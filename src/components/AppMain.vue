@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-      <ul>
+      <ul class="card-list">
         <AppCardMovie v-for="item  in seriesFilm" :key="item.id" :video="item"/>
       </ul>
   </main>
@@ -27,8 +27,11 @@ export default {
         background-color: lightblue;
     }
 
-    ul {
+    .card-list {
         display: flex;
         flex-wrap: wrap;
+        list-style: none;
     }
+
+    
 </style>
