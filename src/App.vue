@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <AppHeader @filmResearch="filterVideo($event) "/>
-    <AppMain :seriesFilm="nameDvd"/> 
+    <AppMain :seriesFilm="filmDvd" :seriesTv="seriesDvd" /> 
   </div>
 </template>
 
@@ -17,7 +17,8 @@ export default {
   },
   data: function () {
     return {
-      nameDvd: [],
+      filmDvd: [],
+      seriesDvd: [],
       researchName: "",
     };
   },
@@ -31,8 +32,17 @@ export default {
         },
       })
       .then((resp) =>  {
-        this.nameDvd = resp.data.results;
+        this.filmDvd = resp.data.results;
       });
+      axios.get("https://api.themoviedb.org/3/search/tv", {
+        params: {
+          api_key:"43278e63239ef2d508322837f14a75df",
+          query: event,    
+        },
+      })
+      .then((resp) => {
+        this.seriesDvd = resp.data.results;
+      })
     },
   },
 };
