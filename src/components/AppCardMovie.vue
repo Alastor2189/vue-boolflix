@@ -1,14 +1,13 @@
 <template>
-  <div class="card">
-      <ul class="menu-card">
-          <li> {{ video.title }}</li>
-          <li> {{ video.original_title  }}</li> 
-          <li> {{ video.original_language  }}</li>
-          <li> {{ video.vote_average }}</li>
-
-      </ul>
-
-  </div>
+    <li class="menu-card">
+        <div class="card">
+          <h2> {{ video.title }}</h2>
+          <h4> {{ video.original_title  }}</h4> 
+          <p> {{ video.original_language  }}</p>
+          <p> {{ video.vote_average }}</p>
+        </div>
+    </li>
+  
 </template>
 
 <script>
@@ -21,5 +20,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    .card {
+        width: calc(100% / 4 - 8px);
+        margin: 4px;
+        padding: 1em;
+        border: 1px solid black;
+        text-align: center;
+    }
 </style>

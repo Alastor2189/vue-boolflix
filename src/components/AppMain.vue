@@ -1,6 +1,8 @@
 <template>
   <main class="main">
-      <AppCardMovie v-for="(item, index) in seriesFilm" :key="index" :movie="item"/>
+      <ul>
+        <AppCardMovie v-for="item  in seriesFilm" :key="item.id" :video="item"/>
+      </ul>
   </main>
 </template>
 
@@ -21,8 +23,12 @@ export default {
     .main {
         width: 80%;
         margin: 0 auto;
+       
+        background-color: lightblue;
+    }
+
+    ul {
         display: flex;
         flex-wrap: wrap;
-        background-color: black;
     }
 </style>
