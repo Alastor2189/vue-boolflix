@@ -34,9 +34,10 @@
         </div>
         <div class="image">
             <img v-if="video.poster_path"
-          :src="`http://image.tmdb.org/t/p/w500/${video.poster_path}`"
-          :alt="video.title ? video.title : video.name"
-        />
+             :src="`http://image.tmdb.org/t/p/w500/${video.poster_path}`"
+             :alt="video.title ? video.title : video.name"
+            />
+            <img v-else src="../assets/no_image.png" alt="Not Image">
         </div>
     </li>
   

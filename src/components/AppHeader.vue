@@ -7,7 +7,7 @@
       </div>
       <div class="search">
           <input type="text" placeholder="Cerca un film/serie Tv" v-model="searchVideo">
-          <button @click="$emit('filmResearch', 'research')">
+          <button @click="$emit('filmResearch', searchVideo)">
             Invia
           </button>
       </div>
