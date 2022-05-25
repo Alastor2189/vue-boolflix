@@ -33,9 +33,9 @@
           <p> {{ video.vote_average }}</p>
         </div>
         <div class="image">
-            <img
-          :src="`https://image.tmdb.org/t/p/w342/${video.poster_path}`"
-          :alt="video.title"
+            <img v-if="video.poster_path"
+          :src="`http://image.tmdb.org/t/p/w500/${video.poster_path}`"
+          :alt="video.title ? video.title : video.name"
         />
         </div>
     </li>
@@ -60,6 +60,10 @@ export default {
         padding: 1em;
         border: 1px solid black;
         text-align: center;
+    }
+
+    .image img{
+        width: 100%;
     }
     
 </style>
