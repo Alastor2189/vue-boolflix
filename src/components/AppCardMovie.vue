@@ -39,6 +39,9 @@
             />
             <img v-else src="../assets/no_image.png" alt="Not Image">
         </div>
+        <p>
+            <i v-for="n in 5" :key="n" class="fa-star" :class="n <= voteStars ? 'fas' : 'far' "></i>
+        </p>
     </li>
   
 </template>
@@ -48,8 +51,14 @@ export default {
     name: 'AppCardMovie',
     props: {
         video: Object,
-    }
-}
+    },
+
+    computed: {
+        voteStars () {
+            return Math.ceil(this.video.vote_average / 2);
+        }
+    },
+};
 </script>
 
 <style lang="scss" scoped>
