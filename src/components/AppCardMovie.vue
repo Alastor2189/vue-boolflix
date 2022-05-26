@@ -1,37 +1,5 @@
 <template>
     <li class="menu-card">
-        <div class="card">
-          <h2> {{ video.title }}</h2>
-          <h4> {{ video.original_title  }}</h4> 
-        <div class="flag">
-            <div v-if="video.original_language === 'it'">
-            <h4>Lingua:</h4>
-            <span :class="`fi fi-it`"></span>
-            </div>
-            <div v-else-if="video.original_language === 'es'">
-            <h4>Lingua:</h4>
-            <span :class="`fi fi-es`"></span>
-            </div>
-            <div v-else-if="video.original_language === 'en'">
-            <h4>Lingua:</h4>
-            <span :class="`fi fi-gb`"></span>
-            </div>
-            <div v-else-if="video.original_language === 'ja'">
-            <h4>Lingua:</h4>
-            <span :class="`fi fi-jp`"></span>
-            </div>
-            <div v-else-if="video.original_language === 'fr'">
-            <h4>Lingua:</h4>
-            <span :class="`fi fi-fr`"></span>
-            </div>
-            <div v-else>
-            <h4>Lingua:</h4>
-            </div>
-            <p> {{ video.original_language  }}</p>
-        </div>
-          
-          <p> {{ video.vote_average }}</p>
-        </div>
         <div class="image">
             <img v-if="video.poster_path"
              :src="`http://image.tmdb.org/t/p/w500/${video.poster_path}`"
@@ -39,9 +7,42 @@
             />
             <img v-else src="../assets/no_image.png" alt="Not Image">
         </div>
-        <p>
-            <i v-for="n in 5" :key="n" class="fa-star" :class="n <= voteStars ? 'fas' : 'far' "></i>
-        </p>
+        <div class="card">
+          <h2> {{ video.title }}</h2>
+          <h4> {{ video.original_title  }}</h4> 
+            <div class="flag">
+                <div v-if="video.original_language === 'it'">
+                    <h4>Lingua:</h4>
+                    <span :class="`fi fi-it`"></span>
+                    </div>
+                <div v-else-if="video.original_language === 'es'">
+                <h4>Lingua:</h4>
+                    <span :class="`fi fi-es`"></span>
+                    </div>
+                <div v-else-if="video.original_language === 'en'">
+                    <h4>Lingua:</h4>
+                    <span :class="`fi fi-gb`"></span>
+                </div>
+                <div v-else-if="video.original_language === 'ja'">
+                    <h4>Lingua:</h4>
+                    <span :class="`fi fi-jp`"></span>
+                </div>
+                <div v-else-if="video.original_language === 'fr'">
+                    <h4>Lingua:</h4>
+                    <span :class="`fi fi-fr`"></span>
+                </div>
+                <div v-else>
+                    <h4>Lingua:</h4>
+                </div>
+                
+            </div>
+            <p> {{ video.original_language  }}</p>
+            <p> {{ video.vote_average }}</p>
+            <p>
+                <i v-for="n in 5" :key="n" class="fa-star" :class="n <= voteStars ? 'fas' : 'far' "></i>
+             </p>
+        </div> 
+        
     </li>
   
 </template>
@@ -70,6 +71,10 @@ export default {
         padding: 1em;
         border: 1px solid black;
         text-align: center;
+    }
+
+    .card h2, .card h4, .card p {
+        margin: 1px;
     }
 
     .image img{

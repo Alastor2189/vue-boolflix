@@ -1,7 +1,10 @@
 <template>
   <main class="main">
       <ul class="card-list">
-        <AppCardMovie v-for="item  in seriesFilm" :key="item.id" :video="item"/>
+        <AppCardMovie v-for="item  in videoFilm" :key="item.id" :video="item"/>
+      </ul>
+      <ul class="card-list">
+        <AppCardMovie v-for="item  in videoSeries" :key="item.id" :video="item"/>
       </ul>
   </main>
 </template>
@@ -14,7 +17,9 @@ export default {
         AppCardMovie,
     },
     props: {
-        seriesFilm: Array,
+        videoFilm: Array,
+        videoSeries: Array,
+        
     },
 };
 </script>
