@@ -66,11 +66,14 @@ export default {
 @import "~flag-icons/css/flag-icons.css";
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
     .menu-card {
-        width: calc(100% / 4 - 8px);
+        width: calc(100% / 5 - 8px);
         margin: 4px;
-        padding: 1em;
         border: 1px solid black;
         text-align: center;
+        position: relative;
+    }
+    .card {
+        position: absolute;
     }
 
     .card h2, .card h4, .card p {
@@ -79,6 +82,7 @@ export default {
 
     .image img{
         width: 100%;
+        height: 100%;
     }
     
 </style>

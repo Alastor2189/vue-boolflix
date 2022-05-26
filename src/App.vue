@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <AppHeader @filmResearch="filterVideo($event) "/>
-    <AppMain :seriesFilm="filmDvd" :seriesTv="seriesDvd" /> 
+    <AppMain :videoFilm="filmDvd" :videoSeries="seriesDvd" /> 
   </div>
 </template>
 

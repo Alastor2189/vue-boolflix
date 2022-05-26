@@ -32,5 +32,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .header {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
 
+   .search{
+       display: flex;
+        justify-content: flex-end;
+    }
+    .title, .search {
+        width: 50%;
+    }
 </style>
