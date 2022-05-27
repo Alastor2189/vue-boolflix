@@ -7,7 +7,7 @@
             />
             <img v-else src="../assets/no_image.png" alt="Not Image">
         </div>
-        <div class="card">
+        <div class="text-card">
           <h2> {{ video.title }}</h2>
           <h4> {{ video.original_title  }}</h4> 
             <div class="flag">
@@ -66,23 +66,41 @@ export default {
 @import "~flag-icons/css/flag-icons.css";
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
     .menu-card {
-        width: calc(100% / 5 - 8px);
+        width: calc(100% / 6 - 8px);
         margin: 4px;
         border: 1px solid black;
         text-align: center;
         position: relative;
+        max-height: 350px;
+        min-height: 350px;
     }
-    .card {
+    .text-card {
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow-y: auto;
+        display: none;
     }
 
-    .card h2, .card h4, .card p {
+    .text-card h2, .card h4, .card p {
         margin: 1px;
+    }
+
+    .image{
+        position: absolute;
     }
 
     .image img{
         width: 100%;
         height: 100%;
     }
+
+    li:hover .text-card {
+    display: block;
+}
+    li:hover .image {
+  display: none;
+}
     
 </style>

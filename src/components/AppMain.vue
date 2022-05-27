@@ -26,17 +26,20 @@ export default {
 
 <style lang="scss" scoped>
     .main {
-        width: 80%;
-        margin: 0 auto;
-       
-        background-color: lightblue;
+        width: 100%;
+       background-color: lightblue;
     }
 
     .card-list {
         display: flex;
         flex-wrap: wrap;
         list-style: none;
+        justify-content: center;
     }
 
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+    }
     
 </style>

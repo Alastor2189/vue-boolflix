@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
-    <AppHeader @filmResearch="filterVideo($event) "/>
-    <AppMain :videoFilm="filmDvd" :videoSeries="seriesDvd" /> 
-  </div>
+  <body>
+    <div id="app">
+      <AppHeader @filmResearch="filterVideo($event) "/>
+      <AppMain :videoFilm="filmDvd" :videoSeries="seriesDvd" /> 
+    </div>
+  </body>
 </template>
 
 <script>
@@ -49,5 +51,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  @import "./style/common.scss"
 </style>
