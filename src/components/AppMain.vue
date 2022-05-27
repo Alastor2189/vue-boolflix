@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
     .main {
         width: 100%;
-       background-color: lightblue;
+        background-color: black;
     }
 
     .card-list {
@@ -35,6 +35,7 @@ export default {
         flex-wrap: wrap;
         list-style: none;
         justify-content: center;
+         
     }
 
     ul {

@@ -39,7 +39,7 @@ export default {
         margin: 0 auto;
     }
 
-   .search{
+    .search{
        display: flex;
         justify-content: flex-end;
     }
